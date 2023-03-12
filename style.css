@@ -1,0 +1,17 @@
+body{
+    background-color:  lightgoldenrodyellow;
+}
+h1{
+    text-align: center;
+    border-color:cornflowerblue ;
+    border-style: double;
+    color: darkblue ;
+}
+
+.display{
+    text-align: center;
+
+}
+p{
+    text-align: center;
+}

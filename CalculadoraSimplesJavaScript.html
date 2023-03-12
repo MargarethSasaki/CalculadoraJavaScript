@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculadora Simples em JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+
+    <header>
+        <h1>Calculadora Simples</h1>
+    </header>
+    
+    <div class="display">
+    <input type="number" name="num1" id="num1" value="">
+    <select id="operacao">
+        <Option value="soma">+</Option>
+        <Option value="sub">-</Option>
+        <Option value="div">/</Option>
+        <Option value="mult">*</Option>
+    </select>
+      <input type="number" name="num2" id="num2" value="">
+       <button onclick="conta()">calcular</button>
+    </div>
+
+        <br>
+        <br>
+
+        <div class="Resultado">
+        <p>Resultado:</p>
+        <p id="resultado"></p>
+
+    </div>
+
+       <script>
+        function conta() {
+                var n1 = Number(document.getElementById("num1").value);
+                var n2 = Number(document.getElementById("num2").value);
+                var operacao = document.getElementById("operacao").value;
+                var resultado;
+
+                switch(operacao){
+                    case "soma":
+                        resultado = n1 + n2;
+                        break;
+
+                    case "sub":
+                        resultado = n1 - n2;
+                        break;
+
+                    case "div":
+                        resultado = n1 / n2;
+                        break;
+
+                    case "mult":
+                        resultado = n1 * n2;
+                        break;
+
+                    default:
+                        resultado = "Conta Inválida";
+
+                }
+                
+                document.getElementById("resultado").innerHTML = resultado;
+            }
+       </script>
+        
+
+    </body>
+</html>
